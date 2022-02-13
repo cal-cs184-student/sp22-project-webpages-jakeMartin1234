@@ -108,6 +108,7 @@
                         <h2>Part 5 - "Pixel Sampling" for texture mapping</h2>
                         <p class="lead">In this section of the project I implemented texture mapping using barycentric coordinates. For each point rasterized, I calulated the value of the barycentric coordinates retreived the value of the pixel with the equivalent barycentric coordinates defined by the triangle in the texture. The only issue with doing this is that it is an extremely small possibiltiy that the pixels in the trianlge on the texture are in the same locations. To solve this I programmed two methods to manage this issue. The nearest pixel method chooses the nearest pixel to the equivelent location of the pixel in the sample buffer. While this method makes sense, it still produces images with aliasing. This was aided by bilinear sampling. With this method the colors in the surrounding 4 pixels are combined with a color being more dominant if the continous point calculated by the barycentric coordinates is closer to it.</p>
                         <p style="text-align:center;"><img src="assets/Part5-Photo1.png" alt="Sphere Main" style="width: 60%;"></p>
+                        <p style="text-align:center;"><img src="assets/Part5-Photo2.png" alt="Sphere Main" style="width: 60%;"></p>
                     </div>
                 </div>
             </div>
@@ -117,12 +118,10 @@
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
-                        <h2>Part 4 - Barycentric coordinates</h2>
-                        <p class="lead">I implemented this part by creating a box around the 
-                        triangle made from its minimum and maximum x and y values. Then I used the inside() function from triangulation.cpp.
-                        If the inside() function returns false for the center of the triangle, I then switched two of the vertices that are input into the 
-                        inside function to change the direction of rotation around the 3 points.</p>
-                        <p style="text-align:center;"><img src="assets/ColorWheel.png" alt="Sphere Main" style="width: 60%;"></p>
+                        <h2>Part 6 - "Level sampling" with mipmaps for texture mapping</h2>
+                        <p class="lead">A mipmap is a data structure which stores a texture image at different resolutions, each of which have been pre-optimized so that a substantial amount of aliasing has been eliminated already at while not having much cost on the CPU at runtime. The first step of sampling a texture image is to determine the difference in distance between two adjacent barycentric co-ordinates in the texture image compared to the sample buffer. The larger this distance, the higher the mipmap level that is needed such that aliasing will be reduced due to small objects on the texture not getting randomly sampled causing random high frequency change in the image. These objects are blurred in the higher levels of the mipmap as they have already been sampled upon creation of the mipmap. This distance that determines the mipmap level increases as the size of the triangle in the sample buffer decreases in comparison with the size of the corresponding triangle in the texture image.</p>
+                        <p style="text-align:center;"><img src="assets/Part6-Photo1.png" alt="Sphere Main" style="width: 60%;"></p>
+                        <p style="text-align:center;"><img src="assets/Part6-Photo2.png" alt="Sphere Main" style="width: 60%;"></p>
                     </div>
                 </div>
             </div>

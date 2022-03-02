@@ -126,8 +126,16 @@
                         <p class="lead">Loop 3:After this I iterated through all of the edges in the mesh and split them. When doing this I set the newly created edges’ isNew values to true and the newly created vertex was also set to true. In the split edge function the edge that is split is actually split up into two separate edges, both of these edge’s isNew values are set to false. The newly created vertex’s new position is set to the new position value created for the edge that is split. The edge’s new position was calculated in loop 2.</p>
                         <p class="lead">Loop 4: Next, I flipped every new edge that was connected to 1 new vertex and 1 vertex that is not new.</p>
                         <p class="lead">Loop 5: Lastly, I updated all of the vertex positions to their new positions. All the vertices in the graph have a new position because I set them in loop 1 and loop 4.</p>
-                        <p style="text-align:center;"><img src="assets/Part6-Photo1.png" alt="Sphere Main" style="width: 90%;"></p>
-                        <p style="text-align:center;"><img src="assets/Part6-Photo2.png" alt="Sphere Main" style="width: 90%;"></p>
+                        <p class="lead">Below shows the process of upsampling a cube. In both of the sets of photos below, the furthest left photo has not been upsampled, the middle photo has been upsampled once and the furthest right photo has been upsampled 3 or 4 times (as many times until my computer slowed down considerably.</p>
+                        <p class="lead">The photo below shows a cube as described in cube.dae given in the starter code. Due to the edges on each face having a different orientation, the cube becomes asymmetric as it is upsampled.</p>
+                        <p style="text-align:center;"><img src="assets/cubeSimple.png" alt="Sphere Main" style="width: 100%;"></p>
+                        <p class="lead">By splitting all the diagonal face edges such that all the faces look the same, the cube now maintains its symmetry as it is upsampled.</p>
+                        <p style="text-align:center;"><img src="assets/cubeImproved.png" alt="Sphere Main" style="width: 100%;"></p>
+                        <p class="lead">Mesh of a beast with no upsampling:</p>
+                        <p style="text-align:center;"><img src="assets/beastBefore.png" alt="Sphere Main" style="width: 90%;"></p>
+                        <p class="lead">Mesh of a beast after one call to upsample:</p>
+                        <p style="text-align:center;"><img src="assets/beastAfter.png" alt="Sphere Main" style="width: 90%;"></p>
+                        
                     </div>
                 </div>
             </div>

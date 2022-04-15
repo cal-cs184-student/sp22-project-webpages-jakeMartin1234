@@ -1,27 +1,60 @@
-<html>
-	<head>
-	</head>
-	<body>
-		<h3>CS184/284A Project Webpages</h3>
-		<br><br>
-		<a href="/proj1/index.html">Project 1</a>
-		<br><br>
-		<a href="/proj2/index.html">Project 2</a>
-		<br><br>
-		<a href="/proj3-1/index.html">Project 3-1</a>
-		<br><br>
-		<a href="/proj3-2/index.html">Project 3-2</a>
-		<br><br>
-		<a href="/proj4/index.html">Project 4</a>
-	</body>
-	<script>
-		var links = document.body.getElementsByTagName("a")
-		var a = window.location.href.indexOf(".io")
-		var repo_name = window.location.href.substring(a+3)
-		for(var i = 0; i < links.length; i++){
-			var link = links[i]
-			var actual_name = link.href.substring(link.href.indexOf(".io")+4)
-			link.href = repo_name + actual_name
-		}
-	</script>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>CS 184 ~ Jake Martin</title>
+        <link rel="icon" type="image/x-icon" href="assets/meshIcon.png" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand" href="#page-top">Jake Martin ~ Foundation of Computer Graphics Portfolio (CS 184)</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                </div>
+            </div>
+        </nav>
+      
+      
+        <!-- About Section -->
+        <section id="about">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Links To Projects</h2>
+                        <p class="lead"><a href="/proj1/index.html">Project 1</a>
+                                <br><br>
+                                <a href="/proj2/index.html">Project 2</a>
+                                <br><br>
+                                <a href="/proj3-1/index.html">Project 3-1</a>
+                                <br><br>
+                                <a href="/proj3-2/index.html">Project 3-2</a>
+                                <br><br>
+                                <a href="/proj4/index.html">Project 4</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script>
+            var links = document.body.getElementsByTagName("a")
+            var a = window.location.href.indexOf(".io")
+            var repo_name = window.location.href.substring(a+3)
+            for(var i = 0; i < links.length; i++){
+                var link = links[i]
+                var actual_name = link.href.substring(link.href.indexOf(".io")+4)
+                link.href = repo_name + actual_name
+            }
+        </script>
+    </body>
 </html>
